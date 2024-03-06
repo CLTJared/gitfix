@@ -7,12 +7,9 @@ export default function BountyBoard({ issues }) {
 
     if (!Auth.loggedIn()) return <Navigate to="/login" />
     const { loading, data } = useQuery(QUERY_ISSUES)
-    console.log(data)
 
     if (loading) return <div className="container">Loading bounties, please wait...</div>
     const issue = data?.issues || []
-    console.log(issue, "issue")
-    // console.info('MyBounties:', data.QUERY_ISSUES)
 
     return (
         <div>

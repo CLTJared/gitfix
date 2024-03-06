@@ -7,6 +7,6 @@ db.once('open', async () => {
   await cleanDB('User', 'users');
   await User.create(userSeeds);
 
-  console.log('all done!');
+  console.info('Database seed completed.');
   process.exit(0);
 });

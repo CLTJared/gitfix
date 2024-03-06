@@ -27,7 +27,7 @@ const Profile = () => {
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             const codeParam = urlParams.get('token');
-            console.log('code param', codeParam)
+
             if (codeParam && (localStorage.getItem('accessToken') === null)) {
                 localStorage.setItem('accessToken', codeParam);
                 getUserData()
@@ -44,7 +44,7 @@ const Profile = () => {
                     }
                 })
                 const data = await response.json()
-                console.log(data)
+
                 await addGithubUsername({
                     variables: {
                         githubUsername: data.login,

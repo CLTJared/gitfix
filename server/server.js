@@ -36,10 +36,7 @@ const startApolloServer = async () => {
 
   app.get('/getAccessToken', async function (req, res) {
 
-    // console.log(req.query.code);
-
     const params = '?client_id=' + process.env.GITHUB_CLIENT_ID + '&client_secret=' + process.env.GITHUB_CLIENT_SECRET + '&code=' + req.query.code;
-    // console.log('param', params)
 
     await fetch(`https://github.com/login/oauth/access_token${params}`, {
       method: 'POST',
@@ -49,8 +46,7 @@ const startApolloServer = async () => {
     }).then((response) => {
       return response.json();
     }).then ((data) => {
-      // console.log('data',data)
-            res.redirect(process.env.ROOT_URL + `/profile/?token=${data.access_token}`)
+      res.redirect(process.env.ROOT_URL + `/profile/?token=${data.access_token}`)
     })
   });
 
@@ -67,7 +63,6 @@ const startApolloServer = async () => {
     }).then((response) => {
       return response.json();
     }).then((data) => {
-      console.log(data)
       res.json(data);
     });
     

@@ -25,10 +25,6 @@ const Success = () => {
   
   const tempData = data?.issues || [];
   
-  
-  // console.log('tempdata', tempData)
-
-  // const issueData = data.issues
   const issueIds = tempData.map((newData, index) => {
 
     console.log(typeof newData.issueId)
@@ -48,7 +44,6 @@ const Success = () => {
 
     if (!issueIds.includes(returnId)) {
       try {
-          console.log('first function')
         const mutationResponse = await saveIssue({
           variables: {
             issueId: localStorage.getItem("StripeId"),
@@ -58,12 +53,11 @@ const Success = () => {
             bountyIssuer: localStorage.getItem('userId')
           }
         })
-      } catch (error) {
-        console.error(error)
+      } catch (err) {
+        console.error(err)
       }
     } else {
       try {
-        console.log('second')
         const mutationResponse = await addBounty({
           variables: {
             issueId: localStorage.getItem("StripeId"),
@@ -71,8 +65,8 @@ const Success = () => {
             userId: localStorage.getItem('userId')
           }
         })
-      }catch (error) {
-        console.error(error)
+      }catch (err) {
+        console.error(err)
       }
     }  
   }
@@ -80,7 +74,6 @@ const Success = () => {
     useEffect(() => {
       const dataDecode = decodeStripe()
       dataDecode.then((res) => {
-        console.log('Total', res)
         setTotal(res / 100)
       });
 

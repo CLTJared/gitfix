@@ -7,7 +7,6 @@ export default function MyBounties() {
 
     if(loading) return <div className="container">Loading bounties, please wait...</div>
     const issues = data?.me.savedIssues || [];
-    console.log(issues)
 
     return (
         <div className="container" id="gh-repo-issues">

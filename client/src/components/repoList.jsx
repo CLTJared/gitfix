@@ -18,8 +18,8 @@ export default function repoList() {
     let issuesURL = `https://api.github.com/users/${username}/repos?type=public`;
     const response = await fetch(issuesURL);
     const data = await response.json();
-    console.info("GitHub Data", data)
     const repoList = data.filter((repo) => repo.open_issues > 0)
+    
     setRepos(repoList)
   };
 
