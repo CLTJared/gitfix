@@ -27,8 +27,11 @@ git@github.com:CLTJared/gitfix.git
 5. Run `npm run develop`
 6. Navigate to `http://localhost:3000/` in your browser of choice
 
-### Demo
+## Demo
 URL: [Demo - GitFix](https://gitfix.onrender.com/)
+For testing purposes, please use the following user information to log in, or sign up for a new account.
+- Username: `jared@example.com`
+- Password: `password`
 
 ## Usage
 
