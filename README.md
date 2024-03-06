@@ -1,7 +1,4 @@
 # GitFix
-
-## Description
-
 A web-developer based platform to offer up Bounties ("incentives") for other developers to help de-bug or add new implimentation to apps.
 
 As a web developer,
@@ -20,8 +17,21 @@ So that I can debug or add new implimentation to their apps for the proposed Bou
 - [License](#license)
 
 ## Installation
+1. In your command line, run the following code:
+```bash
+git@github.com:CLTJared/gitfix.git
+```
+2. Open folder in VSCode
+3. Run `npm install`
+4. Run `npm run seed`
+5. Run `npm run develop`
+6. Navigate to `http://localhost:3000/` in your browser of choice
 
-URL: https://bughunter-khir.onrender.com/
+## Demo
+URL: [Demo - GitFix](https://gitfix.onrender.com/)
+For testing purposes, please use the following user information to log in, or sign up for a new account.
+- Username: `jared@example.com`
+- Password: `password`
 
 ## Usage
 
