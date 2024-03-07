@@ -14,8 +14,6 @@ const fetch = (...args) =>
 const bodyParser = require('body-parser');
 
 
-
-
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
@@ -68,8 +66,6 @@ const startApolloServer = async () => {
     
   })
 
-
-  
 
   // Serve up static assets
   app.use('/images', express.static(path.join(__dirname, '../client/images')));
