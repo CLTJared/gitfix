@@ -9,14 +9,14 @@ const Contact = () => {
                         <form id="contact-form" name="contact-form" action="mail.php" method="POST">
                             <div className="row mb-2">
                                 <div className="col-md-6">
-                                    <div className="md-form form-floating mb-2 mb-md-0">
+                                    <div className="md-form form-floating my-2 mb-md-0">
                                         <input type="text" id="name" name="name" className="form-control" />
                                         <label htmlFor="name" className="">Your name</label>
                                     </div>
                                 </div>
 
                                 <div className="col-md-6">
-                                    <div className="md-form form-floating mb-2 mb-md-0">
+                                    <div className="md-form form-floating my-2 mb-md-0">
                                         <input type="text" id="email" name="email" className="form-control" />
                                         <label htmlFor="email" className="">Your email</label>
                                     </div>
@@ -25,7 +25,7 @@ const Contact = () => {
 
                             <div className="row my-2">
                                 <div className="col-md-12">
-                                    <div className="md-form form-floating mb-2 mb-md-0">
+                                    <div className="md-form form-floating my-2 mb-md-0">
                                         <input type="text" id="subject" name="subject" className="form-control" />
                                         <label htmlFor="subject" className="">Subject</label>
                                     </div>
@@ -34,7 +34,7 @@ const Contact = () => {
 
                             <div className="row my-2">
                                 <div className="col-md-12">
-                                    <div className="md-form form-floating mb-2 mb-md-0">
+                                    <div className="md-form form-floating my-2 mb-md-0">
                                         <textarea type="text" id="message" name="message" rows="2" className="form-control md-textarea"></textarea>
                                         <label htmlFor="message">Your message</label>
                                     </div>
