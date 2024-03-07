@@ -61,10 +61,11 @@ const Profile = () => {
 
 
     return (
-        <div className="container">
+        <div className="container mb-4">
             <h1>{`Welcome ${user}`}</h1>
-            <button className='btn btn-success my-2' onClick={loginWithGithub}>Verify your account with Github</button>
-
+            <p class="lead">Want to make your repos available for bounties?<br />
+                <button className='btn btn-success my-2' onClick={loginWithGithub}>Verify your account with Github</button>
+            </p>
             <div className="accordion" id="accordionExample">
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
